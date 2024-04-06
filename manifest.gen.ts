@@ -97,17 +97,21 @@ const manifest = {
     "deco-sites/summer-culture/sections/Images/ShoppableBanner.tsx": $$$$$$28,
     "deco-sites/summer-culture/sections/Links/LinkTree.tsx": $$$$$$29,
     "deco-sites/summer-culture/sections/Links/Shortcuts.tsx": $$$$$$30,
-    "deco-sites/summer-culture/sections/Miscellaneous/CampaignTimer.tsx": $$$$$$31,
-    "deco-sites/summer-culture/sections/Miscellaneous/CookieConsent.tsx": $$$$$$32,
+    "deco-sites/summer-culture/sections/Miscellaneous/CampaignTimer.tsx":
+      $$$$$$31,
+    "deco-sites/summer-culture/sections/Miscellaneous/CookieConsent.tsx":
+      $$$$$$32,
     "deco-sites/summer-culture/sections/Miscellaneous/Slide.tsx": $$$$$$33,
     "deco-sites/summer-culture/sections/Newsletter/Newsletter.tsx": $$$$$$34,
     "deco-sites/summer-culture/sections/Product/ImageGalleryFrontBack.tsx":
       $$$$$$35,
     "deco-sites/summer-culture/sections/Product/NotFound.tsx": $$$$$$36,
-    "deco-sites/summer-culture/sections/Product/NotFoundChallenge.tsx": $$$$$$37,
+    "deco-sites/summer-culture/sections/Product/NotFoundChallenge.tsx":
+      $$$$$$37,
     "deco-sites/summer-culture/sections/Product/ProductDetails.tsx": $$$$$$38,
     "deco-sites/summer-culture/sections/Product/ProductShelf.tsx": $$$$$$39,
-    "deco-sites/summer-culture/sections/Product/ProductShelfTabbed.tsx": $$$$$$40,
+    "deco-sites/summer-culture/sections/Product/ProductShelfTabbed.tsx":
+      $$$$$$40,
     "deco-sites/summer-culture/sections/Product/SearchResult.tsx": $$$$$$41,
     "deco-sites/summer-culture/sections/Product/ShelfWithImage.tsx": $$$$$$42,
     "deco-sites/summer-culture/sections/Product/Wishlist.tsx": $$$$$$43,
