@@ -8,6 +8,7 @@ import type { SectionProps } from "deco/types.ts";
 import Alert from "./Alert.tsx";
 import Navbar from "./Navbar.tsx";
 import { headerHeight } from "./constants.ts";
+import { Section } from "deco/blocks/section.ts";
 
 export interface Logo {
   src: ImageWidget;
@@ -40,6 +41,8 @@ export interface Props {
   logoPosition?: "left" | "center";
 
   buttons?: Buttons;
+
+  section: Section;
 }
 
 function Header({
@@ -76,6 +79,7 @@ function Header({
   },
   logoPosition = "center",
   buttons,
+  section,
   device,
 }: SectionProps<typeof loader>) {
   const platform = usePlatform();
@@ -102,6 +106,9 @@ function Header({
           </div>
         </Drawers>
       </header>
+      <div class="flex">
+        {section && <section.Component {...section.props} />}
+      </div>
     </>
   );
 }
