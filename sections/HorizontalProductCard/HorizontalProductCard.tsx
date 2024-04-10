@@ -27,7 +27,7 @@ export default function HorizontalProductCard(props: Props) {
           />
         )}
 
-        <div className={`${eixo} flex`}>
+        <div className={`${eixo} flex p-1`}>
           <div className="flex flex-col items-center justify-center gap-2">
             <h3 className="text-ellipsis text-primary">
               {title}
