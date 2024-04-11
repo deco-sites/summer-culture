@@ -56,6 +56,7 @@ import * as $$$$$$44 from "./sections/Product/Wishlist.tsx";
 import * as $$$$$$45 from "./sections/Social/InstagramPosts.tsx";
 import * as $$$$$$46 from "./sections/Social/WhatsApp.tsx";
 import * as $$$$$$47 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$48 from "./sections/WeatherCustom/WeatherCustom.tsx";
 
 const manifest = {
   "loaders": {
@@ -121,6 +122,8 @@ const manifest = {
     "deco-sites/summer-culture/sections/Social/InstagramPosts.tsx": $$$$$$45,
     "deco-sites/summer-culture/sections/Social/WhatsApp.tsx": $$$$$$46,
     "deco-sites/summer-culture/sections/Theme/Theme.tsx": $$$$$$47,
+    "deco-sites/summer-culture/sections/WeatherCustom/WeatherCustom.tsx":
+      $$$$$$48,
   },
   "apps": {
     "deco-sites/summer-culture/apps/decohub.ts": $$$$$$$$$$$0,
