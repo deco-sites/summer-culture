@@ -8,6 +8,7 @@ export default function WeatherCustom({ temperature }: Props) {
   return (
     <>
       <div>
+        <p>Temperatura</p>
         {temperature && <p>{temperature?.celsius} graus</p>}
       </div>
     </>
