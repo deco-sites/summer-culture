@@ -56,7 +56,7 @@ export default function PartialImageGallery(props: PartialImageGalleryProps) {
   const SliceDynamyc = dataGallery.length <= 3 ? 3 : (props.cut ?? 3) + 1;
 
   return (
-    <section className="w-full max-w-56 flex flex-row gap-4 flex-wrap">
+    <section className="w-full max-w-56 flex flex-row gap-4 flex-wrap overflow-visible">
       {SliceDynamyc < dataGallery.length + 1 && (
         <button
           className="block"
@@ -72,8 +72,13 @@ export default function PartialImageGallery(props: PartialImageGalleryProps) {
 
       {dataGallery.slice(0, props.cut ?? 3).map((el, i) => (
         <>
-          <div key={i} className="w-full max-w-24">
-            <Image src={el.src} width={96} height={96} />
+          <div key={i} className="w-full max-w-24 overflow-visible">
+            <Image
+              src={el.src}
+              width={96}
+              height={96}
+              class="transition-transform duration-300 hover:scale-125 origin-center"
+            />
           </div>
         </>
       ))}
