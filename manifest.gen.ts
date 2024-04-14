@@ -2,12 +2,15 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import * as $$$$$$$$$0 from "./actions/sendVotes.ts";
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
-import * as $$$2 from "./loaders/availableIcons.ts";
-import * as $$$3 from "./loaders/icons.ts";
-import * as $$$0 from "./loaders/Layouts/ProductCard.tsx";
-import * as $$$1 from "./loaders/List/Sections.tsx";
+import * as $$$4 from "./loaders/availableIcons.ts";
+import * as $$$0 from "./loaders/GetVotes/getProductVotes.ts";
+import * as $$$1 from "./loaders/GetVotes/getVotes.ts";
+import * as $$$5 from "./loaders/icons.ts";
+import * as $$$2 from "./loaders/Layouts/ProductCard.tsx";
+import * as $$$3 from "./loaders/List/Sections.tsx";
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Cards/IconCardsCarousel.tsx";
 import * as $$$$$$2 from "./sections/Cards/IconCardsCarouselWithImage.tsx";
@@ -54,18 +57,21 @@ import * as $$$$$$42 from "./sections/Product/ProductShelfTabbed.tsx";
 import * as $$$$$$43 from "./sections/Product/SearchResult.tsx";
 import * as $$$$$$44 from "./sections/Product/ShelfWithImage.tsx";
 import * as $$$$$$45 from "./sections/Product/Wishlist.tsx";
-import * as $$$$$$46 from "./sections/SimpleBanner/SimpleBanner.tsx";
-import * as $$$$$$47 from "./sections/Social/InstagramPosts.tsx";
-import * as $$$$$$48 from "./sections/Social/WhatsApp.tsx";
-import * as $$$$$$49 from "./sections/Theme/Theme.tsx";
-import * as $$$$$$50 from "./sections/WeatherCustom/WeatherCustom.tsx";
+import * as $$$$$$46 from "./sections/ShowVotes/ShowVotes.tsx";
+import * as $$$$$$47 from "./sections/SimpleBanner/SimpleBanner.tsx";
+import * as $$$$$$48 from "./sections/Social/InstagramPosts.tsx";
+import * as $$$$$$49 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$50 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$51 from "./sections/WeatherCustom/WeatherCustom.tsx";
 
 const manifest = {
   "loaders": {
-    "deco-sites/summer-culture/loaders/availableIcons.ts": $$$2,
-    "deco-sites/summer-culture/loaders/icons.ts": $$$3,
-    "deco-sites/summer-culture/loaders/Layouts/ProductCard.tsx": $$$0,
-    "deco-sites/summer-culture/loaders/List/Sections.tsx": $$$1,
+    "deco-sites/summer-culture/loaders/availableIcons.ts": $$$4,
+    "deco-sites/summer-culture/loaders/GetVotes/getProductVotes.ts": $$$0,
+    "deco-sites/summer-culture/loaders/GetVotes/getVotes.ts": $$$1,
+    "deco-sites/summer-culture/loaders/icons.ts": $$$5,
+    "deco-sites/summer-culture/loaders/Layouts/ProductCard.tsx": $$$2,
+    "deco-sites/summer-culture/loaders/List/Sections.tsx": $$$3,
   },
   "sections": {
     "deco-sites/summer-culture/sections/Animation/Animation.tsx": $$$$$$0,
@@ -123,13 +129,17 @@ const manifest = {
     "deco-sites/summer-culture/sections/Product/SearchResult.tsx": $$$$$$43,
     "deco-sites/summer-culture/sections/Product/ShelfWithImage.tsx": $$$$$$44,
     "deco-sites/summer-culture/sections/Product/Wishlist.tsx": $$$$$$45,
+    "deco-sites/summer-culture/sections/ShowVotes/ShowVotes.tsx": $$$$$$46,
     "deco-sites/summer-culture/sections/SimpleBanner/SimpleBanner.tsx":
-      $$$$$$46,
-    "deco-sites/summer-culture/sections/Social/InstagramPosts.tsx": $$$$$$47,
-    "deco-sites/summer-culture/sections/Social/WhatsApp.tsx": $$$$$$48,
-    "deco-sites/summer-culture/sections/Theme/Theme.tsx": $$$$$$49,
+      $$$$$$47,
+    "deco-sites/summer-culture/sections/Social/InstagramPosts.tsx": $$$$$$48,
+    "deco-sites/summer-culture/sections/Social/WhatsApp.tsx": $$$$$$49,
+    "deco-sites/summer-culture/sections/Theme/Theme.tsx": $$$$$$50,
     "deco-sites/summer-culture/sections/WeatherCustom/WeatherCustom.tsx":
-      $$$$$$50,
+      $$$$$$51,
+  },
+  "actions": {
+    "deco-sites/summer-culture/actions/sendVotes.ts": $$$$$$$$$0,
   },
   "apps": {
     "deco-sites/summer-culture/apps/decohub.ts": $$$$$$$$$$$0,

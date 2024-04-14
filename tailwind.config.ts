@@ -10,6 +10,9 @@ export default {
       animation: {
         sliding: "sliding 30s linear infinite",
       },
+      fontFamily: {
+        amiko: ["Amiko", "sans-serif"],
+      },
       keyframes: {
         sliding: {
           "0%": { transform: "translateX(0)" },

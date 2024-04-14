@@ -18,6 +18,7 @@ import * as $Header_Cart_vtex from "./islands/Header/Cart/vtex.tsx";
 import * as $Header_Cart_wake from "./islands/Header/Cart/wake.tsx";
 import * as $Header_Drawers from "./islands/Header/Drawers.tsx";
 import * as $Header_Searchbar from "./islands/Header/Searchbar.tsx";
+import * as $HorizontalProductCard_TotalVote from "./islands/HorizontalProductCard/TotalVote.tsx";
 import * as $Newsletter from "./islands/Newsletter.tsx";
 import * as $OutOfStock from "./islands/OutOfStock.tsx";
 import * as $ProductImageZoom from "./islands/ProductImageZoom.tsx";
@@ -25,6 +26,8 @@ import * as $SearchControls from "./islands/SearchControls.tsx";
 import * as $ShippingSimulation from "./islands/ShippingSimulation.tsx";
 import * as $ShowMore from "./islands/ShowMore.tsx";
 import * as $SliderJS from "./islands/SliderJS.tsx";
+import * as $TotalProductVotes_TotalProductVotes from "./islands/TotalProductVotes/TotalProductVotes.tsx";
+import * as $TotalVotes_TotalVotex from "./islands/TotalVotes/TotalVotex.tsx";
 import * as $WishlistButton_vtex from "./islands/WishlistButton/vtex.tsx";
 import * as $WishlistButton_wake from "./islands/WishlistButton/wake.tsx";
 import { type Manifest } from "$fresh/server.ts";
@@ -49,6 +52,8 @@ const manifest = {
     "./islands/Header/Cart/wake.tsx": $Header_Cart_wake,
     "./islands/Header/Drawers.tsx": $Header_Drawers,
     "./islands/Header/Searchbar.tsx": $Header_Searchbar,
+    "./islands/HorizontalProductCard/TotalVote.tsx":
+      $HorizontalProductCard_TotalVote,
     "./islands/Newsletter.tsx": $Newsletter,
     "./islands/OutOfStock.tsx": $OutOfStock,
     "./islands/ProductImageZoom.tsx": $ProductImageZoom,
@@ -56,6 +61,9 @@ const manifest = {
     "./islands/ShippingSimulation.tsx": $ShippingSimulation,
     "./islands/ShowMore.tsx": $ShowMore,
     "./islands/SliderJS.tsx": $SliderJS,
+    "./islands/TotalProductVotes/TotalProductVotes.tsx":
+      $TotalProductVotes_TotalProductVotes,
+    "./islands/TotalVotes/TotalVotex.tsx": $TotalVotes_TotalVotex,
     "./islands/WishlistButton/vtex.tsx": $WishlistButton_vtex,
     "./islands/WishlistButton/wake.tsx": $WishlistButton_wake,
   },

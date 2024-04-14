@@ -1,5 +1,14 @@
 import Image from "apps/website/components/Image.tsx";
-import { Product } from "apps/commerce/types.ts";
+
+import TotalProductVotes from "deco-sites/summer-culture/islands/TotalProductVotes/TotalProductVotes.tsx";
+
+import type { Product } from "apps/commerce/types.ts";
+
+export interface ProductProps {
+  image: string;
+  productID: string;
+  product: Product;
+}
 
 export interface Props {
   products: Product[] | null;
@@ -89,10 +98,10 @@ export default function HorizontalProductCard(props: Props) {
     <>
       {products.map((product: Product) => (
         <div
-          key={product["@id"]}
+          key={product.productID}
           className={`${sizes}  w-full flex flex-row justify-center align-middle rounded-lg border-solid border p-4`}
         >
-          {product.image && (
+          {product?.image && (
             <figure class="relative overflow-hidden">
               <Image
                 src={product.image[0].url ?? ""}
@@ -104,6 +113,8 @@ export default function HorizontalProductCard(props: Props) {
               />
             </figure>
           )}
+
+          <TotalProductVotes productId={product.productID ?? ""} />
 
           <div className={`${eixo} flex p-1`}>
             <div className="flex flex-col items-center justify-center gap-2">
