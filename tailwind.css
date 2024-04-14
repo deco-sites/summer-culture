@@ -4,6 +4,10 @@
 
 @layer base {
 
+  :root {
+    --font-family: 'Amiko', sans-serif;
+  }
+
   /* Allow changing font family via CMS */
   html {
     font-family: var(--font-family);
