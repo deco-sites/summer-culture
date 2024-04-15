@@ -5,6 +5,7 @@
 import * as $$$$$$$$$0 from "./actions/sendVotes.ts";
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
+import * as $$$$$$$$0 from "./flags/multivariate.ts";
 import * as $$$4 from "./loaders/availableIcons.ts";
 import * as $$$0 from "./loaders/GetVotes/getProductVotes.ts";
 import * as $$$1 from "./loaders/GetVotes/getVotes.ts";
@@ -137,6 +138,9 @@ const manifest = {
     "deco-sites/summer-culture/sections/Theme/Theme.tsx": $$$$$$50,
     "deco-sites/summer-culture/sections/WeatherCustom/WeatherCustom.tsx":
       $$$$$$51,
+  },
+  "flags": {
+    "deco-sites/summer-culture/flags/multivariate.ts": $$$$$$$$0,
   },
   "actions": {
     "deco-sites/summer-culture/actions/sendVotes.ts": $$$$$$$$$0,
