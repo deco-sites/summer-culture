@@ -7,9 +7,11 @@ export interface Props {
 export default function WeatherCustom({ temperature }: Props) {
   return (
     <>
-      <div>
-        <p>Temperatura</p>
-        {temperature && <p>{temperature?.celsius} graus</p>}
+      <div class="fixed bg-white z-20 bottom-8 right-4 rounded-3xl border px-4 h-10 flex items-center justify-center">
+        <p>
+          RJ{' '} 
+          {temperature && temperature?.celsius}°
+        </p>
       </div>
     </>
   );
