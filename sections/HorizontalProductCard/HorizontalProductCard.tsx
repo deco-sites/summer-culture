@@ -3,15 +3,10 @@ import Image from "apps/website/components/Image.tsx";
 import TotalProductVotes from "deco-sites/summer-culture/islands/TotalProductVotes/TotalProductVotes.tsx";
 
 import type { Product } from "apps/commerce/types.ts";
-
-export interface ProductProps {
-  image: string;
-  productID: string;
-  product: Product;
-}
+import { ProductCardProps } from "deco-sites/summer-culture/flags/multivariate.ts";
 
 export interface Props {
-  products: Product[] | null;
+  products: ProductCardProps;
   title: string;
   eixo: "flex-col" | "flex-row";
   description: string;
