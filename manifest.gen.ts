@@ -38,18 +38,18 @@ import * as $$$$$$21 from "./sections/Content/TextWithImage.tsx";
 import * as $$$$$$22 from "./sections/Footer/Footer.tsx";
 import * as $$$$$$23 from "./sections/Gallery.tsx";
 import * as $$$$$$24 from "./sections/Header/Header.tsx";
-import * as $$$$$$25 from "./sections/HorizontalProductCard/HorizontalProductCard.tsx";
-import * as $$$$$$26 from "./sections/Images/BannerGrid.tsx";
-import * as $$$$$$27 from "./sections/Images/Carousel.tsx";
-import * as $$$$$$28 from "./sections/Images/ImageGallery.tsx";
-import * as $$$$$$29 from "./sections/Images/ShoppableBanner.tsx";
-import * as $$$$$$30 from "./sections/Links/LinkTree.tsx";
-import * as $$$$$$31 from "./sections/Links/Shortcuts.tsx";
-import * as $$$$$$32 from "./sections/Miscellaneous/CampaignTimer.tsx";
-import * as $$$$$$33 from "./sections/Miscellaneous/CookieConsent.tsx";
-import * as $$$$$$34 from "./sections/Miscellaneous/Slide.tsx";
-import * as $$$$$$35 from "./sections/Newsletter/Newsletter.tsx";
-import * as $$$$$$36 from "./sections/PartialImageGallery/PartialImageGallery.tsx";
+import * as $$$$$$25 from "./sections/Images/BannerGrid.tsx";
+import * as $$$$$$26 from "./sections/Images/Carousel.tsx";
+import * as $$$$$$27 from "./sections/Images/ImageGallery.tsx";
+import * as $$$$$$28 from "./sections/Images/ShoppableBanner.tsx";
+import * as $$$$$$29 from "./sections/Links/LinkTree.tsx";
+import * as $$$$$$30 from "./sections/Links/Shortcuts.tsx";
+import * as $$$$$$31 from "./sections/Miscellaneous/CampaignTimer.tsx";
+import * as $$$$$$32 from "./sections/Miscellaneous/CookieConsent.tsx";
+import * as $$$$$$33 from "./sections/Miscellaneous/Slide.tsx";
+import * as $$$$$$34 from "./sections/Newsletter/Newsletter.tsx";
+import * as $$$$$$35 from "./sections/PartialImageGallery/PartialImageGallery.tsx";
+import * as $$$$$$36 from "./sections/Product/HorizontalProductCard.tsx";
 import * as $$$$$$37 from "./sections/Product/ImageGalleryFrontBack.tsx";
 import * as $$$$$$38 from "./sections/Product/NotFound.tsx";
 import * as $$$$$$39 from "./sections/Product/NotFoundChallenge.tsx";
@@ -103,21 +103,21 @@ const manifest = {
     "deco-sites/summer-culture/sections/Footer/Footer.tsx": $$$$$$22,
     "deco-sites/summer-culture/sections/Gallery.tsx": $$$$$$23,
     "deco-sites/summer-culture/sections/Header/Header.tsx": $$$$$$24,
-    "deco-sites/summer-culture/sections/HorizontalProductCard/HorizontalProductCard.tsx":
-      $$$$$$25,
-    "deco-sites/summer-culture/sections/Images/BannerGrid.tsx": $$$$$$26,
-    "deco-sites/summer-culture/sections/Images/Carousel.tsx": $$$$$$27,
-    "deco-sites/summer-culture/sections/Images/ImageGallery.tsx": $$$$$$28,
-    "deco-sites/summer-culture/sections/Images/ShoppableBanner.tsx": $$$$$$29,
-    "deco-sites/summer-culture/sections/Links/LinkTree.tsx": $$$$$$30,
-    "deco-sites/summer-culture/sections/Links/Shortcuts.tsx": $$$$$$31,
+    "deco-sites/summer-culture/sections/Images/BannerGrid.tsx": $$$$$$25,
+    "deco-sites/summer-culture/sections/Images/Carousel.tsx": $$$$$$26,
+    "deco-sites/summer-culture/sections/Images/ImageGallery.tsx": $$$$$$27,
+    "deco-sites/summer-culture/sections/Images/ShoppableBanner.tsx": $$$$$$28,
+    "deco-sites/summer-culture/sections/Links/LinkTree.tsx": $$$$$$29,
+    "deco-sites/summer-culture/sections/Links/Shortcuts.tsx": $$$$$$30,
     "deco-sites/summer-culture/sections/Miscellaneous/CampaignTimer.tsx":
-      $$$$$$32,
+      $$$$$$31,
     "deco-sites/summer-culture/sections/Miscellaneous/CookieConsent.tsx":
-      $$$$$$33,
-    "deco-sites/summer-culture/sections/Miscellaneous/Slide.tsx": $$$$$$34,
-    "deco-sites/summer-culture/sections/Newsletter/Newsletter.tsx": $$$$$$35,
+      $$$$$$32,
+    "deco-sites/summer-culture/sections/Miscellaneous/Slide.tsx": $$$$$$33,
+    "deco-sites/summer-culture/sections/Newsletter/Newsletter.tsx": $$$$$$34,
     "deco-sites/summer-culture/sections/PartialImageGallery/PartialImageGallery.tsx":
+      $$$$$$35,
+    "deco-sites/summer-culture/sections/Product/HorizontalProductCard.tsx":
       $$$$$$36,
     "deco-sites/summer-culture/sections/Product/ImageGalleryFrontBack.tsx":
       $$$$$$37,
