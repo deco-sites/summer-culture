@@ -5,12 +5,14 @@
 import * as $$$$$$$$$0 from "./actions/sendVotes.ts";
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
+import * as $$$$$$$$0 from "./flags/multivariate.ts";
 import * as $$$4 from "./loaders/availableIcons.ts";
 import * as $$$0 from "./loaders/GetVotes/getProductVotes.ts";
 import * as $$$1 from "./loaders/GetVotes/getVotes.ts";
 import * as $$$5 from "./loaders/icons.ts";
 import * as $$$2 from "./loaders/Layouts/ProductCard.tsx";
 import * as $$$3 from "./loaders/List/Sections.tsx";
+import * as $$$$$$$0 from "./matchers/utm.ts";
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Cards/IconCardsCarousel.tsx";
 import * as $$$$$$2 from "./sections/Cards/IconCardsCarouselWithImage.tsx";
@@ -137,6 +139,12 @@ const manifest = {
     "deco-sites/summer-culture/sections/Theme/Theme.tsx": $$$$$$50,
     "deco-sites/summer-culture/sections/WeatherCustom/WeatherCustom.tsx":
       $$$$$$51,
+  },
+  "matchers": {
+    "deco-sites/summer-culture/matchers/utm.ts": $$$$$$$0,
+  },
+  "flags": {
+    "deco-sites/summer-culture/flags/multivariate.ts": $$$$$$$$0,
   },
   "actions": {
     "deco-sites/summer-culture/actions/sendVotes.ts": $$$$$$$$$0,
