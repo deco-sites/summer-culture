@@ -3,6 +3,7 @@ import { useSignal, useSignalEffect } from "@preact/signals";
 import { invoke } from "deco-sites/summer-culture/runtime.ts";
 import Icon from "deco-sites/summer-culture/components/ui/Icon.tsx";
 import { totalVotes } from "deco-sites/summer-culture/sdk/totalVotes.ts";
+import { Slide, toast, ToastContainer } from "react-toastify";
 
 export interface Props {
   productId: string;
@@ -18,8 +19,19 @@ export default function TotalProductVotes({ productId }: Props) {
         productId: productId,
       });
       if (data.status === "ok") {
-        console.log(productId, "productId");
         totalVotes.value++;
+
+        toast.success("👍 Curtiu!", {
+          position: "top-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Slide,
+        });
       }
     }
 
@@ -41,12 +53,16 @@ export default function TotalProductVotes({ productId }: Props) {
     verifyVotes();
   });
 
+  // deno-lint-ignore no-explicit-any
+  const ToastContainerComponent = ToastContainer as any;
+
   return (
     <div class="cursor-pointer flex flex-row gap-2 items-center">
       {!clicked.value
         ? <Icon id="MoodSmile" size={24} onClick={() => clicked.value = true} />
         : <Icon id="MoodCheck" size={24} />}
       <span class="font-bold text-sm">{likes.value} Likes</span>
+      <ToastContainerComponent />
     </div>
   );
 }

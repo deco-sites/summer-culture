@@ -22,7 +22,7 @@
     "component": "deno eval 'import \"deco/scripts/component.ts\"'",
     "release": "deno eval 'import \"deco/scripts/release.ts\"'",
     "update": "deno run -Ar https://deco.cx/update",
-    "check": "deno fmt && deno lint && deno check dev.ts main.ts",
+    "check": "deno fmt && deno lint && deno check dev.ts main.ts &&DENO_V8_FLAGS='--max-old-space-size=8192' ",
     "install": "deno eval 'import \"deco/scripts/apps/install.ts\"'",
     "uninstall": "deno eval 'import \"deco/scripts/apps/uninstall.ts\"'",
     "bundle": "deno eval 'import \"deco/scripts/apps/bundle.ts\"' deco-sites/summer-culture",
