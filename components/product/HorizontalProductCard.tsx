@@ -7,9 +7,9 @@ import { ProductCardProps } from "deco-sites/summer-culture/flags/multivariate.t
 
 export interface Props {
   products: ProductCardProps;
-  title: string;
-  eixo: "flex-col" | "flex-row";
-  description: string;
+  title?: string;
+  eixo?: "flex-col" | "flex-row";
+  description?: string;
   animateImage?: boolean;
 
   /**
@@ -84,7 +84,7 @@ export function LoadingFallback() {
 
 export default function HorizontalProductCard(props: Props) {
   const { eixo, products, sizes, animateImage } = props;
-  
+
   if (!products || products.length === 0) {
     return null;
   }
@@ -94,7 +94,7 @@ export default function HorizontalProductCard(props: Props) {
       {products.map((product: Product) => (
         <div
           key={product.productID}
-          className={`${sizes}  w-full flex flex-row justify-center align-middle rounded-lg border-solid border p-4`}
+          className={`${sizes}  mx-auto w-full flex flex-row justify-center align-middle rounded-lg border-solid border p-4`}
         >
           {product?.image && (
             <figure class="relative overflow-hidden">
