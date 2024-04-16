@@ -84,7 +84,7 @@ export function LoadingFallback() {
 
 export default function HorizontalProductCard(props: Props) {
   const { eixo, products, sizes, animateImage } = props;
-
+  
   if (!products || products.length === 0) {
     return null;
   }
