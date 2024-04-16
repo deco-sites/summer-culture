@@ -15,7 +15,7 @@ import NavItem from "./NavItem.tsx";
 import { navbarHeight } from "./constants.ts";
 import { Buttons, Logo } from "../../components/header/Header.tsx";
 
-import ShowVotes from "deco-sites/summer-culture/sections/ShowVotes/ShowVotes.tsx";
+import TotalVotes from "deco-sites/summer-culture/islands/TotalVotes/TotalVotex.tsx";
 
 // Make it sure to render it on the server only. DO NOT render it on an island
 function Navbar(
@@ -105,7 +105,7 @@ function Navbar(
         )}
         <div class="flex gap-1">
           <Icon id="Friends" size={20} />
-          <ShowVotes />
+          <TotalVotes />
         </div>
 
         <Searchbar searchbar={searchbar} />

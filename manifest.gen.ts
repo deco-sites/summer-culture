@@ -59,12 +59,11 @@ import * as $$$$$$42 from "./sections/Product/ProductShelfTabbed.tsx";
 import * as $$$$$$43 from "./sections/Product/SearchResult.tsx";
 import * as $$$$$$44 from "./sections/Product/ShelfWithImage.tsx";
 import * as $$$$$$45 from "./sections/Product/Wishlist.tsx";
-import * as $$$$$$46 from "./sections/ShowVotes/ShowVotes.tsx";
-import * as $$$$$$47 from "./sections/SimpleBanner/SimpleBanner.tsx";
-import * as $$$$$$48 from "./sections/Social/InstagramPosts.tsx";
-import * as $$$$$$49 from "./sections/Social/WhatsApp.tsx";
-import * as $$$$$$50 from "./sections/Theme/Theme.tsx";
-import * as $$$$$$51 from "./sections/WeatherCustom/WeatherCustom.tsx";
+import * as $$$$$$46 from "./sections/SimpleBanner/SimpleBanner.tsx";
+import * as $$$$$$47 from "./sections/Social/InstagramPosts.tsx";
+import * as $$$$$$48 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$49 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$50 from "./sections/WeatherCustom/WeatherCustom.tsx";
 
 const manifest = {
   "loaders": {
@@ -131,14 +130,13 @@ const manifest = {
     "deco-sites/summer-culture/sections/Product/SearchResult.tsx": $$$$$$43,
     "deco-sites/summer-culture/sections/Product/ShelfWithImage.tsx": $$$$$$44,
     "deco-sites/summer-culture/sections/Product/Wishlist.tsx": $$$$$$45,
-    "deco-sites/summer-culture/sections/ShowVotes/ShowVotes.tsx": $$$$$$46,
     "deco-sites/summer-culture/sections/SimpleBanner/SimpleBanner.tsx":
-      $$$$$$47,
-    "deco-sites/summer-culture/sections/Social/InstagramPosts.tsx": $$$$$$48,
-    "deco-sites/summer-culture/sections/Social/WhatsApp.tsx": $$$$$$49,
-    "deco-sites/summer-culture/sections/Theme/Theme.tsx": $$$$$$50,
+      $$$$$$46,
+    "deco-sites/summer-culture/sections/Social/InstagramPosts.tsx": $$$$$$47,
+    "deco-sites/summer-culture/sections/Social/WhatsApp.tsx": $$$$$$48,
+    "deco-sites/summer-culture/sections/Theme/Theme.tsx": $$$$$$49,
     "deco-sites/summer-culture/sections/WeatherCustom/WeatherCustom.tsx":
-      $$$$$$51,
+      $$$$$$50,
   },
   "matchers": {
     "deco-sites/summer-culture/matchers/utm.ts": $$$$$$$0,
