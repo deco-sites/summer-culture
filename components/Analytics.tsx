@@ -22,6 +22,7 @@ export const SendEventOnClick = <E extends AnalyticsEvent>({ event, id }: {
 
         elem.addEventListener("click", () => {
           globalThis.window.DECO.events.dispatch(event);
+          console.log("clicou");
         });
       },
       id,

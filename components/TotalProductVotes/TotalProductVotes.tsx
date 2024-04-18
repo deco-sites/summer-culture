@@ -4,14 +4,18 @@ import { invoke } from "deco-sites/summer-culture/runtime.ts";
 import Icon from "deco-sites/summer-culture/components/ui/Icon.tsx";
 import { totalVotes } from "deco-sites/summer-culture/sdk/totalVotes.ts";
 import { Slide, toast, ToastContainer } from "react-toastify";
+import { SendEventOnClick } from "deco-sites/summer-culture/components/Analytics.tsx";
+
+import { useId } from "deco-sites/summer-culture/sdk/useId.ts";
 
 export interface Props {
   productId: string;
 }
 
 export default function TotalProductVotes({ productId }: Props) {
-  const likes = useSignal<number>(0);
+  const votes = useSignal<number>(0);
   const clicked = useSignal(false);
+  const id = useId();
 
   useSignalEffect(() => {
     async function addVotes() {
@@ -21,16 +25,15 @@ export default function TotalProductVotes({ productId }: Props) {
       if (data.status === "ok") {
         totalVotes.value++;
 
-        toast.success("👍 Curtiu!", {
+        toast.success("obrigado pelo voto!", {
           position: "top-right",
-          autoClose: 1000,
-          hideProgressBar: false,
+          autoClose: 5000,
+          hideProgressBar: true,
           closeOnClick: true,
-          pauseOnHover: false,
+          pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
-          transition: Slide,
+          theme: "dark",
         });
       }
     }
@@ -40,7 +43,7 @@ export default function TotalProductVotes({ productId }: Props) {
         .getProductVotes({
           productId: productId,
         });
-      likes.value = res?.product ?? 0;
+      votes.value = res?.product ?? 0;
     }
     setInterval(() => {
       verifyVotes();
@@ -57,11 +60,26 @@ export default function TotalProductVotes({ productId }: Props) {
   const ToastContainerComponent = ToastContainer as any;
 
   return (
-    <div class="cursor-pointer flex flex-row gap-2 items-center">
+    <div class=" absolute z-10 bg-white p-4 rounded border right-4 top-4 cursor-pointer flex flex-row gap-2 items-center">
       {!clicked.value
         ? <Icon id="MoodSmile" size={24} onClick={() => clicked.value = true} />
         : <Icon id="MoodCheck" size={24} />}
-      <span class="font-bold text-sm">{likes.value} Likes</span>
+      <span class="font-bold text-sm">{votes.value} Votos</span>
+
+      <SendEventOnClick
+        id={id}
+        event={{
+          // @ts-ignore:
+          name: "post_score",
+          params: {
+            // @ts-ignore:
+            level: 5,
+            score: votes.value + 1,
+            character: String(productId),
+          },
+        }}
+      />
+
       <ToastContainerComponent />
     </div>
   );
