@@ -49,6 +49,17 @@
   animation: progress-frame ease normal
 }
 
+.Toastify__toast-container {
+  position: fixed !important;
+  z-index: 9999;
+  top: 128px;
+  right: 20px;
+}
+
+.Toastify__toast-icon  {
+  height: 20px;
+}
+
 @keyframes progress-frame {
   0% {
     --dot-progress: 0%

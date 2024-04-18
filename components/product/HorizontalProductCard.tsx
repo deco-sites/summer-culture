@@ -94,13 +94,13 @@ export default function HorizontalProductCard(props: Props) {
       {products.map((product: Product) => (
         <div
           key={product.productID}
-          className={`${sizes}  mx-auto w-full flex flex-row justify-center align-middle rounded-lg border-solid border p-4`}
+          className={`${sizes} relative mx-auto flex h-64 w-full flex-row justify-between align-middle `}
         >
           {product?.image && (
-            <figure class="relative overflow-hidden">
+            <figure class="relative max-w-40 overflow-hidden lg:max-w-none">
               <Image
                 src={product.image[0].url ?? ""}
-                className={`w-full max-w-xs h-full object-cover transform transition-transform duration-500 cursor-pointer ${
+                className={`h-full w-full transform object-cover transition-transform duration-500 cursor-pointer ${
                   animateImage ? "hover:scale-110" : ""
                 } `}
                 width={200}
@@ -111,22 +111,24 @@ export default function HorizontalProductCard(props: Props) {
 
           <TotalProductVotes productId={product.productID ?? ""} />
 
-          <div className={`${eixo} flex p-1`}>
-            <div className="flex flex-col items-center justify-center gap-2">
-              <h3 className=" text-black">
+          <div
+            className={`${eixo} flex h-full w-full items-center justify-center bg-gray-900 px-4 flex-col md:flex-row md:gap-6`}
+          >
+            <div className="flex flex-col items-center justify-center gap-4">
+              <h3 className=" text-white truncate md:text-clip">
                 {products && products[0].name}
               </h3>
 
-              <p className=" text-black md:truncate">
+              <p className=" text-white truncate md:text-clip">
                 {products && products[0].description}
               </p>
             </div>
             <div class="flex flex-col items-center justify-center">
             </div>
-            <p className="">
-              {products && products[0].offers?.offers[0].price}
+            <p className="text-white whitespace-nowrap">
+              R${"  "}{products && products[0].offers?.offers[0].price}
             </p>
-            <button className="w-full border rounded-lg flex flex-row  items-center justify-center h-10 bg-secondary hover:opacity-60">
+            <button className="bg-transparent flex h-10 w-full flex-row items-center justify-center rounded-lg border text-white hover:opacity-60">
               Comprar
             </button>
           </div>
