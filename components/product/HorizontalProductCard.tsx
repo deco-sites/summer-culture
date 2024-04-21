@@ -4,24 +4,25 @@ import TotalProductVotes from "deco-sites/summer-culture/islands/TotalProductVot
 
 import type { Product } from "apps/commerce/types.ts";
 import { ProductCardProps } from "deco-sites/summer-culture/flags/multivariate.ts";
+import AddToCartButtonVTEX from "../../islands/AddToCartButton/vtex.tsx";
+import { useCart } from "apps/vnda/hooks/useCart.ts";
 
 export interface Props {
   products: ProductCardProps;
   title?: string;
-  eixo?: "flex-col" | "flex-row";
   description?: string;
   animateImage?: boolean;
 
   /**
-   * @format dynamic-options "max-w-xl"
-    | "max-w-2xl"
-    | "max-w-3xl"
-    | "max-w-4xl"
-    | "max-w-5xl"
-    | "max-w-6xl"
-    | "max-w-7xl"
-    | "max-w-full";
-   */
+     * @format dynamic-options "max-w-xl"
+      | "max-w-2xl"
+      | "max-w-3xl"
+      | "max-w-4xl"
+      | "max-w-5xl"
+      | "max-w-6xl"
+      | "max-w-7xl"
+      | "max-w-full";
+    */
   sizes:
     | "max-w-xl"
     | "max-w-2xl"
@@ -53,16 +54,16 @@ function ErrorFallback({ error }: { error?: Error }) {
 export function LoadingFallback() {
   return (
     <div style={{ height: "716px" }} class="flex justify-center items-center">
-      <div className="flex flex-row justify-center align-middle rounded-lg border-solid border p-4">
+      <div className="flex flex-row justify-center p-4 align-middle border border-solid rounded-lg">
         <div class=" bg-gray-200 w-52 h-32 animate-pulse " />
         <div className="flex p-1">
           <div className="flex flex-col items-center justify-center gap-2">
-            <h3 className="text-ellipsis text-black">
+            <h3 className="text-black text-ellipsis">
               <span class="loading loading-spinner" />
               ...carregando
             </h3>
 
-            <p className="text-ellipsis text-black">
+            <p className="text-black text-ellipsis">
               <span class="loading loading-spinner" />
               ...carregando
             </p>
@@ -73,7 +74,7 @@ export function LoadingFallback() {
             <span class="loading loading-spinner" />
             ...carregando
           </p>
-          <button className="w-full border rounded-lg flex flex-row  items-center justify-center h-10 bg-secondary hover:opacity-60">
+          <button className="flex flex-row items-center justify-center w-full h-10 border rounded-lg bg-secondary hover:opacity-60">
             Comprar
           </button>
         </div>
@@ -83,7 +84,8 @@ export function LoadingFallback() {
 }
 
 export default function HorizontalProductCard(props: Props) {
-  const { eixo, products, sizes, animateImage } = props;
+  const { products, sizes, animateImage } = props;
+  const { addItem } = useCart();
 
   if (!products || products.length === 0) {
     return null;
@@ -94,7 +96,7 @@ export default function HorizontalProductCard(props: Props) {
       {products.map((product: Product) => (
         <div
           key={product.productID}
-          className={`${sizes} relative mx-auto flex h-64 w-full flex-row justify-between align-middle `}
+          className={`${sizes} relative mx-auto flex h-64 w-full justify-between align-middle `}
         >
           {product?.image && (
             <figure class="relative max-w-40 overflow-hidden lg:max-w-none">
@@ -112,25 +114,28 @@ export default function HorizontalProductCard(props: Props) {
           <TotalProductVotes productId={product.productID ?? ""} />
 
           <div
-            className={`${eixo} flex h-full w-full items-center justify-center bg-gray-900 px-4 flex-col md:flex-row md:gap-6`}
+            className={`flex flex-col w-full items-center py-4 justify-center bg-[#E8E8E8] px-4 md:gap-6 md:flex-row `}
           >
-            <div className="flex flex-col items-center justify-center gap-4">
-              <h3 className=" text-white truncate md:text-clip">
+            <div className="flex flex-col items-center justify-center gap-1">
+              <h3 className="truncate text-base text-base-content uppercase  font-bold md:text-clip lg:text-lg">
                 {products && products[0].name}
               </h3>
 
-              <p className=" text-white truncate md:text-clip">
+              <p className="truncate text-base text-base-content uppercase font-normal md:text-clip lg:text-sm">
                 {products && products[0].description}
               </p>
             </div>
             <div class="flex flex-col items-center justify-center">
             </div>
-            <p className="text-white whitespace-nowrap">
+            <p className="text-base-content font-light whitespace-nowrap lg:text-sm ">
               R${"  "}{products && products[0].offers?.offers[0].price}
             </p>
-            <button className="bg-transparent flex h-10 w-full flex-row items-center justify-center rounded-lg border text-white hover:opacity-60">
-              Comprar
-            </button>
+
+            <AddToCartButtonVTEX
+              eventParams={{ items: [] }}
+              productID={product.productID}
+              seller={"1"}
+            />
           </div>
         </div>
       ))}
