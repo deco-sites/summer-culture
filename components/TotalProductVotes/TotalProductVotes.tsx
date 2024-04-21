@@ -60,9 +60,16 @@ export default function TotalProductVotes({ productId }: Props) {
   const ToastContainerComponent = ToastContainer as any;
 
   return (
-    <div class=" absolute z-10 bg-white p-4 rounded border right-4 top-4 cursor-pointer flex flex-row gap-2 items-center">
+    <div class="absolute z-10 p-1 rounded border right-4 top-4 cursor-pointer flex items-center flex-row justify-center gap-2 lg:flex-col  ">
       {!clicked.value
-        ? <Icon id="MoodSmile" size={24} onClick={() => clicked.value = true} />
+        ? (
+          <Icon
+            class="cursor-pointer"
+            id="MoodSmile"
+            size={24}
+            onClick={() => clicked.value = true}
+          />
+        )
         : <Icon id="MoodCheck" size={24} />}
       <span class="font-bold text-sm">{votes.value} Votos</span>
 
